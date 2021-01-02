@@ -1,0 +1,15 @@
+{% extends 'main/Base.html' %}
+
+{% block title %}
+Страница про нас
+{% endblock %}
+
+
+{% block content %}
+    <h1>Создать отзыв</h1>
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.task }}<br>
+        <button class ="submit" clas="btn btn-success">Отправить</button>
+    </form>
+{% endblock %}
